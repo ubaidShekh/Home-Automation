@@ -264,7 +264,7 @@ const AutomationCategory = ({ navigation }) => {
     setError(null);
 
     //const API_KEY_WEATHER = "75a7fd65f8355d9a32c3a2a066adedd0";
-    const API_KEY_WEATHER = process.env.EXPO_PUBLIC_API_KEY_WEATHER;
+    const API_KEY_WEATHER = process.env.API_KEY_WEATHER;
     const URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY_WEATHER}&units=metric`;
 
     try {
@@ -10897,7 +10897,7 @@ const WeatherAutomationScreen = () => {
   const [error, setError] = useState("");
   const [autoMode, setAutoMode] = useState(true);
   const [automationLogs, setAutomationLogs] = useState([]);
-  const API_KEY_WEATHER = process.env.EXPO_PUBLIC_API_KEY_WEATHER;
+  const API_KEY_WEATHER = process.env.API_KEY_WEATHER;
 
   const fetchWeather = async () => {
     if (!city) return;
